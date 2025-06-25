@@ -1,0 +1,23 @@
+# Ignore user secrets and build artifacts
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+bin/
+obj/
+*.db-shm
+*.db-wal
+
+# Ignore environment-specific config
+appsettings.Development.json
+
+# Ignore sensitive config files
+Backend/PlantStore.Api/appsettings.Development.json
+
+# Ignore everything VS-related
+Backend/PlantStore.Api/.vs/
+
+# Ignore frontend dependencies and builds
+Frontend/plantstore-frontend/node_modules/
+Frontend/plantstore-frontend/dist/
