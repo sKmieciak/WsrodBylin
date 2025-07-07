@@ -1,0 +1,1979 @@
+{
+  "Version": 1,
+  "Hash": "sPD/nf37pLGVO0pVZBUp/CurbqCDPJEJvuLcdESsbQ4=",
+  "Source": "PlantStore.Api",
+  "BasePath": "_content/PlantStore.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PlantStore.Api\\wwwroot",
+      "Source": "PlantStore.Api",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).png",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t5pxywo0nm",
+      "Integrity": "oV+sqmjaHf5l2dEkohvgZaOQu24HT02uYxivTaR4cT0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).png"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\372b032e-3edf-4178-82e3-5bdde285d4b3_logo.png",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/372b032e-3edf-4178-82e3-5bdde285d4b3_logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1s6zp5x1cz",
+      "Integrity": "EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\372b032e-3edf-4178-82e3-5bdde285d4b3_logo.png"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hcinjw1g4t",
+      "Integrity": "oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hcinjw1g4t",
+      "Integrity": "oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\borowka.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/borowka#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2ueyv6ih8f",
+      "Integrity": "mjYY9VKssidxRTF+X2Z55kpKl2iRlLbNWGRya4iHy9c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\borowka.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\brzoskwinia.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/brzoskwinia#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bcevs6wp5f",
+      "Integrity": "pfEEeKu2O4v3qI3gYXbBAce8gGjeYWlNjjNcnEz/r7s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\brzoskwinia.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\czeresnia.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/czeresnia#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ut93esoel0",
+      "Integrity": "fu0GTnvRDHq3zWjZlur+7aF5yqbwUoHSPbllsjnpSoQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\czeresnia.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\grusza.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/grusza#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cja368krdb",
+      "Integrity": "GD44QQ7fGC4mY6hrcNE8vN3MqmNErt9ULELCh+bI+zo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\grusza.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\jablon.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/jablon#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "inwhg2s7ea",
+      "Integrity": "jpe7qxcdFTNogYaIM8xdh98PDXF0xLK9sDRYRpcOu1g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\jablon.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\malina.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/malina#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d4elix9d95",
+      "Integrity": "Q38m/zZmRGP8zdWu5Gw9+6/4qFj5dVtX0I86xj1krOw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\malina.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\morela.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/morela#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zdq4pjrlxg",
+      "Integrity": "lzPRxBtsDkUgvbYmj9MSCUFOidr4M7Natl5N/ndDAz8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\morela.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\porzeczka.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/porzeczka#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nr7tpo85at",
+      "Integrity": "k6XCuInCkxg30rI0SLqrDZPa4zbxvhw/HsacoH5o27A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\porzeczka.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\sliwa.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/sliwa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6hmosy1cle",
+      "Integrity": "NgRw1qas7bzk48kz1X4s3vWX9wh6hjE9QPKKTTGwZpw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sliwa.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\winorosl.jpg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "images/winorosl#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "do785sld48",
+      "Integrity": "I4IGoiiHHSaOHzhau3wn1DFBKpm8tD4oKZPpjX93BhY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\winorosl.jpg"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\index-CJG6yuN5.js",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "assets/index-CJG6yuN5#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bmlhmwyat9",
+      "Integrity": "s320oZZ/e+tvGfr5P60Mh/wauBkpD6APSxG3v+y5wQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "..\\..\\Frontend\\plant-store-frontend\\dist\\assets\\index-CJG6yuN5.js"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\index-D79hzTHD.css",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "assets/index-D79hzTHD#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "miigrloso7",
+      "Integrity": "vrB7bJZNTiIxZBKqVhAkDkGT6qRnNtV943RQhzMnusc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "..\\..\\Frontend\\plant-store-frontend\\dist\\assets\\index-D79hzTHD.css"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\logo-jWCSg-ij.png",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "assets/logo-jWCSg-ij#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1s6zp5x1cz",
+      "Integrity": "EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "..\\..\\Frontend\\plant-store-frontend\\dist\\assets\\logo-jWCSg-ij.png"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\index.html",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ji83tb64ek",
+      "Integrity": "JQlAVe8nxszWxKSrJz8eCKn0MhrW1TTPPuCMwfFyu/E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "..\\..\\Frontend\\plant-store-frontend\\dist\\index.html"
+    },
+    {
+      "Identity": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\vite.svg",
+      "SourceId": "PlantStore.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\",
+      "BasePath": "_content/PlantStore.Api",
+      "RelativePath": "vite#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "69kjnsiwqx",
+      "Integrity": "SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "..\\..\\Frontend\\plant-store-frontend\\dist\\vite.svg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "assets/index-CJG6yuN5.bmlhmwyat9.js",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\index-CJG6yuN5.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "575272"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s320oZZ/e+tvGfr5P60Mh/wauBkpD6APSxG3v+y5wQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bmlhmwyat9"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/index-CJG6yuN5.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-s320oZZ/e+tvGfr5P60Mh/wauBkpD6APSxG3v+y5wQA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/index-CJG6yuN5.js",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\index-CJG6yuN5.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "575272"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"s320oZZ/e+tvGfr5P60Mh/wauBkpD6APSxG3v+y5wQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-s320oZZ/e+tvGfr5P60Mh/wauBkpD6APSxG3v+y5wQA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/index-D79hzTHD.css",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\index-D79hzTHD.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vrB7bJZNTiIxZBKqVhAkDkGT6qRnNtV943RQhzMnusc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vrB7bJZNTiIxZBKqVhAkDkGT6qRnNtV943RQhzMnusc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/index-D79hzTHD.miigrloso7.css",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\index-D79hzTHD.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "28684"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vrB7bJZNTiIxZBKqVhAkDkGT6qRnNtV943RQhzMnusc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "miigrloso7"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/index-D79hzTHD.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vrB7bJZNTiIxZBKqVhAkDkGT6qRnNtV943RQhzMnusc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/logo-jWCSg-ij.1s6zp5x1cz.png",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\logo-jWCSg-ij.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3176412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1s6zp5x1cz"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/logo-jWCSg-ij.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4="
+        }
+      ]
+    },
+    {
+      "Route": "assets/logo-jWCSg-ij.png",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\assets\\logo-jWCSg-ij.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3176412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4="
+        }
+      ]
+    },
+    {
+      "Route": "images/045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).png",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202011"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oV+sqmjaHf5l2dEkohvgZaOQu24HT02uYxivTaR4cT0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 17:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oV+sqmjaHf5l2dEkohvgZaOQu24HT02uYxivTaR4cT0="
+        }
+      ]
+    },
+    {
+      "Route": "images/045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).t5pxywo0nm.png",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "202011"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oV+sqmjaHf5l2dEkohvgZaOQu24HT02uYxivTaR4cT0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 17:00:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t5pxywo0nm"
+        },
+        {
+          "Name": "label",
+          "Value": "images/045fb01c-081f-442a-ae85-38d136492959_obraz_2025-06-12_221631290-removebg-preview (1).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oV+sqmjaHf5l2dEkohvgZaOQu24HT02uYxivTaR4cT0="
+        }
+      ]
+    },
+    {
+      "Route": "images/372b032e-3edf-4178-82e3-5bdde285d4b3_logo.1s6zp5x1cz.png",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\372b032e-3edf-4178-82e3-5bdde285d4b3_logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3176412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 16:39:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1s6zp5x1cz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/372b032e-3edf-4178-82e3-5bdde285d4b3_logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4="
+        }
+      ]
+    },
+    {
+      "Route": "images/372b032e-3edf-4178-82e3-5bdde285d4b3_logo.png",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\372b032e-3edf-4178-82e3-5bdde285d4b3_logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3176412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 16:39:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EUpWTCN5I3JtBMxUYJ2yWJPBy3s06t3W69J8Sz2Y/c4="
+        }
+      ]
+    },
+    {
+      "Route": "images/7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.hcinjw1g4t.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3175"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 16:40:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcinjw1g4t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\7b41a729-4123-4bb5-97ce-9af8472329ce_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3175"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 20 Jun 2025 16:40:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.hcinjw1g4t.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3175"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:45:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hcinjw1g4t"
+        },
+        {
+          "Name": "label",
+          "Value": "images/8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\8f58dfcc-5dbd-44e1-af57-0fcc3a7c6e01_f2405557-f9c4-4aff-b582-2ee38648d2da.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3175"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:45:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oT/Hh3F4EWkN5j5tP+IKwoLcsASw1DkSivHJNCOaIpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/borowka.2ueyv6ih8f.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\borowka.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14030"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mjYY9VKssidxRTF+X2Z55kpKl2iRlLbNWGRya4iHy9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:42:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2ueyv6ih8f"
+        },
+        {
+          "Name": "label",
+          "Value": "images/borowka.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mjYY9VKssidxRTF+X2Z55kpKl2iRlLbNWGRya4iHy9c="
+        }
+      ]
+    },
+    {
+      "Route": "images/borowka.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\borowka.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14030"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mjYY9VKssidxRTF+X2Z55kpKl2iRlLbNWGRya4iHy9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:42:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mjYY9VKssidxRTF+X2Z55kpKl2iRlLbNWGRya4iHy9c="
+        }
+      ]
+    },
+    {
+      "Route": "images/brzoskwinia.bcevs6wp5f.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\brzoskwinia.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7212"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pfEEeKu2O4v3qI3gYXbBAce8gGjeYWlNjjNcnEz/r7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 16:37:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bcevs6wp5f"
+        },
+        {
+          "Name": "label",
+          "Value": "images/brzoskwinia.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pfEEeKu2O4v3qI3gYXbBAce8gGjeYWlNjjNcnEz/r7s="
+        }
+      ]
+    },
+    {
+      "Route": "images/brzoskwinia.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\brzoskwinia.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7212"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pfEEeKu2O4v3qI3gYXbBAce8gGjeYWlNjjNcnEz/r7s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 16:37:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pfEEeKu2O4v3qI3gYXbBAce8gGjeYWlNjjNcnEz/r7s="
+        }
+      ]
+    },
+    {
+      "Route": "images/czeresnia.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\czeresnia.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232007"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fu0GTnvRDHq3zWjZlur+7aF5yqbwUoHSPbllsjnpSoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:40:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fu0GTnvRDHq3zWjZlur+7aF5yqbwUoHSPbllsjnpSoQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/czeresnia.ut93esoel0.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\czeresnia.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232007"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fu0GTnvRDHq3zWjZlur+7aF5yqbwUoHSPbllsjnpSoQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:40:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ut93esoel0"
+        },
+        {
+          "Name": "label",
+          "Value": "images/czeresnia.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fu0GTnvRDHq3zWjZlur+7aF5yqbwUoHSPbllsjnpSoQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/grusza.cja368krdb.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\grusza.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14272"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GD44QQ7fGC4mY6hrcNE8vN3MqmNErt9ULELCh+bI+zo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:39:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cja368krdb"
+        },
+        {
+          "Name": "label",
+          "Value": "images/grusza.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GD44QQ7fGC4mY6hrcNE8vN3MqmNErt9ULELCh+bI+zo="
+        }
+      ]
+    },
+    {
+      "Route": "images/grusza.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\grusza.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "14272"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GD44QQ7fGC4mY6hrcNE8vN3MqmNErt9ULELCh+bI+zo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:39:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GD44QQ7fGC4mY6hrcNE8vN3MqmNErt9ULELCh+bI+zo="
+        }
+      ]
+    },
+    {
+      "Route": "images/jablon.inwhg2s7ea.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\jablon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65747"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jpe7qxcdFTNogYaIM8xdh98PDXF0xLK9sDRYRpcOu1g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:39:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "inwhg2s7ea"
+        },
+        {
+          "Name": "label",
+          "Value": "images/jablon.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jpe7qxcdFTNogYaIM8xdh98PDXF0xLK9sDRYRpcOu1g="
+        }
+      ]
+    },
+    {
+      "Route": "images/jablon.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\jablon.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "65747"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jpe7qxcdFTNogYaIM8xdh98PDXF0xLK9sDRYRpcOu1g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:39:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jpe7qxcdFTNogYaIM8xdh98PDXF0xLK9sDRYRpcOu1g="
+        }
+      ]
+    },
+    {
+      "Route": "images/malina.d4elix9d95.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\malina.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "94881"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q38m/zZmRGP8zdWu5Gw9+6/4qFj5dVtX0I86xj1krOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:42:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d4elix9d95"
+        },
+        {
+          "Name": "label",
+          "Value": "images/malina.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q38m/zZmRGP8zdWu5Gw9+6/4qFj5dVtX0I86xj1krOw="
+        }
+      ]
+    },
+    {
+      "Route": "images/malina.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\malina.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "94881"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q38m/zZmRGP8zdWu5Gw9+6/4qFj5dVtX0I86xj1krOw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:42:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q38m/zZmRGP8zdWu5Gw9+6/4qFj5dVtX0I86xj1krOw="
+        }
+      ]
+    },
+    {
+      "Route": "images/morela.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\morela.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lzPRxBtsDkUgvbYmj9MSCUFOidr4M7Natl5N/ndDAz8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lzPRxBtsDkUgvbYmj9MSCUFOidr4M7Natl5N/ndDAz8="
+        }
+      ]
+    },
+    {
+      "Route": "images/morela.zdq4pjrlxg.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\morela.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "53046"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lzPRxBtsDkUgvbYmj9MSCUFOidr4M7Natl5N/ndDAz8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zdq4pjrlxg"
+        },
+        {
+          "Name": "label",
+          "Value": "images/morela.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lzPRxBtsDkUgvbYmj9MSCUFOidr4M7Natl5N/ndDAz8="
+        }
+      ]
+    },
+    {
+      "Route": "images/porzeczka.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\porzeczka.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122937"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k6XCuInCkxg30rI0SLqrDZPa4zbxvhw/HsacoH5o27A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 16:37:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-k6XCuInCkxg30rI0SLqrDZPa4zbxvhw/HsacoH5o27A="
+        }
+      ]
+    },
+    {
+      "Route": "images/porzeczka.nr7tpo85at.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\porzeczka.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "122937"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"k6XCuInCkxg30rI0SLqrDZPa4zbxvhw/HsacoH5o27A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 16:37:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nr7tpo85at"
+        },
+        {
+          "Name": "label",
+          "Value": "images/porzeczka.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-k6XCuInCkxg30rI0SLqrDZPa4zbxvhw/HsacoH5o27A="
+        }
+      ]
+    },
+    {
+      "Route": "images/sliwa.6hmosy1cle.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\sliwa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "615356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NgRw1qas7bzk48kz1X4s3vWX9wh6hjE9QPKKTTGwZpw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:38:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6hmosy1cle"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sliwa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NgRw1qas7bzk48kz1X4s3vWX9wh6hjE9QPKKTTGwZpw="
+        }
+      ]
+    },
+    {
+      "Route": "images/sliwa.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\sliwa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "615356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NgRw1qas7bzk48kz1X4s3vWX9wh6hjE9QPKKTTGwZpw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:38:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NgRw1qas7bzk48kz1X4s3vWX9wh6hjE9QPKKTTGwZpw="
+        }
+      ]
+    },
+    {
+      "Route": "images/winorosl.do785sld48.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\winorosl.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "667776"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I4IGoiiHHSaOHzhau3wn1DFBKpm8tD4oKZPpjX93BhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:43:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "do785sld48"
+        },
+        {
+          "Name": "label",
+          "Value": "images/winorosl.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I4IGoiiHHSaOHzhau3wn1DFBKpm8tD4oKZPpjX93BhY="
+        }
+      ]
+    },
+    {
+      "Route": "images/winorosl.jpg",
+      "AssetFile": "C:\\PlantStore\\Backend\\PlantStore.Api\\wwwroot\\images\\winorosl.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "667776"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I4IGoiiHHSaOHzhau3wn1DFBKpm8tD4oKZPpjX93BhY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 19:43:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I4IGoiiHHSaOHzhau3wn1DFBKpm8tD4oKZPpjX93BhY="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JQlAVe8nxszWxKSrJz8eCKn0MhrW1TTPPuCMwfFyu/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JQlAVe8nxszWxKSrJz8eCKn0MhrW1TTPPuCMwfFyu/E="
+        }
+      ]
+    },
+    {
+      "Route": "index.ji83tb64ek.html",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JQlAVe8nxszWxKSrJz8eCKn0MhrW1TTPPuCMwfFyu/E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Jul 2025 18:48:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ji83tb64ek"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JQlAVe8nxszWxKSrJz8eCKn0MhrW1TTPPuCMwfFyu/E="
+        }
+      ]
+    },
+    {
+      "Route": "vite.69kjnsiwqx.svg",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\vite.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1497"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 19:46:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "69kjnsiwqx"
+        },
+        {
+          "Name": "label",
+          "Value": "vite.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs="
+        }
+      ]
+    },
+    {
+      "Route": "vite.svg",
+      "AssetFile": "C:\\PlantStore\\Frontend\\plant-store-frontend\\dist\\vite.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1497"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 19:46:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-SnSK/UQ5GLsWWRyDTEAdrjPoeGGrXbrQgRw6O0qSFPs="
+        }
+      ]
+    }
+  ]
+}
