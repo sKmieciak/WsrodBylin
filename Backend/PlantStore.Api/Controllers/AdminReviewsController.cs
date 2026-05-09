@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using PlantStore.Api.Data;
 using PlantStore.Api.Mappers;
 using PlantStore.Api.DTOs;
+using PlantStore.Api.Services;
 
 namespace PlantStore.Api.Controllers
 {
@@ -13,10 +14,12 @@ namespace PlantStore.Api.Controllers
     public class AdminReviewsController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IAuditService _audit;
 
-        public AdminReviewsController(AppDbContext context)
+        public AdminReviewsController(AppDbContext context, IAuditService audit)
         {
             _context = context;
+            _audit = audit;
         }
 
         [HttpGet]
@@ -38,20 +41,31 @@ namespace PlantStore.Api.Controllers
 
             _context.Reviews.Remove(review);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Usunięto", "Recenzja", id, $"Autor: {review.AuthorName}");
 
             return NoContent();
         }
 
-        [HttpPut("{id}/toggle-visibility")]
-        public async Task<IActionResult> ToggleVisibility(int id)
+        [HttpPut("{id}/approve")]
+        public async Task<IActionResult> Approve(int id)
         {
             var review = await _context.Reviews.FindAsync(id);
             if (review == null) return NotFound();
-
-            review.IsVisible = !review.IsVisible;
+            review.IsVisible = true;
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Zatwierdzono", "Recenzja", id, $"Autor: {review.AuthorName}");
+            return Ok();
+        }
 
-            return Ok(new { review.IsVisible });
+        [HttpPut("{id}/reject")]
+        public async Task<IActionResult> Reject(int id)
+        {
+            var review = await _context.Reviews.FindAsync(id);
+            if (review == null) return NotFound();
+            review.IsVisible = false;
+            await _context.SaveChangesAsync();
+            await _audit.LogAsync("Ukryto", "Recenzja", id, $"Autor: {review.AuthorName}");
+            return Ok();
         }
     }
 }

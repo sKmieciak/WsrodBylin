@@ -11,6 +11,11 @@ namespace PlantStore.Api.Mappers
             {
                 Id = order.Id,
                 CreatedAt = order.CreatedAt,
+                Courier = order.Courier,
+                PaymentMethod = order.PaymentMethod,
+                DeliveryCost = order.DeliveryCost,
+                Status = order.Status,
+                PaymentStatus = order.PaymentStatus,
                 Items = order.Items.Select(oi => new OrderItemDto
                 {
                     ProductId = oi.ProductId,

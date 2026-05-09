@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using PlantStore.Api.Data;
 using PlantStore.Api.DTOs;
 using PlantStore.Api.Mappers;
+using PlantStore.Api.Services;
 
 namespace PlantStore.Api.Controllers
 {
@@ -13,10 +14,12 @@ namespace PlantStore.Api.Controllers
     public class AdminUsersController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IAuditService _audit;
 
-        public AdminUsersController(AppDbContext context)
+        public AdminUsersController(AppDbContext context, IAuditService audit)
         {
             _context = context;
+            _audit = audit;
         }
 
         [HttpGet]
@@ -42,6 +45,7 @@ namespace PlantStore.Api.Controllers
 
             user.UpdateFromDto(dto);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Edytowano", "Użytkownik", id, user.Email);
             return NoContent();
         }
 
@@ -51,8 +55,10 @@ namespace PlantStore.Api.Controllers
             var user = await _context.Users.FindAsync(id);
             if (user == null) return NotFound();
 
+            var email = user.Email;
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Usunięto", "Użytkownik", id, email);
             return NoContent();
         }
 

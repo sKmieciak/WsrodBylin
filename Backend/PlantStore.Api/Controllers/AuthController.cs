@@ -9,6 +9,8 @@ using PlantStore.Api.Data;
 using PlantStore.Api.Models;
 using PlantStore.Api.Dtos;
 using PlantStore.Api.Configuration;
+using Microsoft.AspNetCore.RateLimiting;
+using FluentValidation;
 
 namespace PlantStore.Api.Controllers
 {
@@ -19,17 +21,27 @@ namespace PlantStore.Api.Controllers
         private readonly AppDbContext _context;
         private readonly IPasswordHasher<User> _hasher;
         private readonly JwtSettings _jwt;
+        private readonly IValidator<UserRegisterDto> _registerValidator;
 
-        public AuthController(AppDbContext context, IPasswordHasher<User> hasher, IOptions<JwtSettings> jwtOptions)
+        public AuthController(
+            AppDbContext context,
+            IPasswordHasher<User> hasher,
+            IOptions<JwtSettings> jwtOptions,
+            IValidator<UserRegisterDto> registerValidator)
         {
             _context = context;
             _hasher = hasher;
             _jwt = jwtOptions.Value;
+            _registerValidator = registerValidator;
         }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterDto dto)
         {
+            var validation = await _registerValidator.ValidateAsync(dto);
+            if (!validation.IsValid)
+                return BadRequest(validation.Errors.Select(e => e.ErrorMessage));
+
             if (_context.Users.Any(u => u.Email == dto.Email))
                 return BadRequest("Użytkownik o podanym e-mailu już istnieje.");
 
@@ -65,6 +77,7 @@ namespace PlantStore.Api.Controllers
 
 
         [HttpPost("login")]
+        [EnableRateLimiting("auth")]
         public async Task<IActionResult> Login(UserLoginDto dto)
         {
             var user = _context.Users.FirstOrDefault(u => u.Email == dto.Email);

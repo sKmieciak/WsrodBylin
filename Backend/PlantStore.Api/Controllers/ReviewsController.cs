@@ -20,7 +20,7 @@ public class ReviewsController : ControllerBase
     public async Task<ActionResult<IEnumerable<ReviewResponseDto>>> GetReviews(int productId)
     {
         var reviews = await _context.Reviews
-            .Where(r => r.ProductId == productId)
+            .Where(r => r.ProductId == productId && r.IsVisible)
             .OrderByDescending(r => r.CreatedAt)
             .ToListAsync();
 

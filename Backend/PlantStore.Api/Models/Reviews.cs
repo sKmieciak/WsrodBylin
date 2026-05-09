@@ -12,7 +12,7 @@
         // Relacja do produktu
         public int ProductId { get; set; }
         public Product Product { get; set; } = null!;
-        public bool IsVisible { get; set; } = true;
+        public bool IsVisible { get; set; } = false;
 
     }
 

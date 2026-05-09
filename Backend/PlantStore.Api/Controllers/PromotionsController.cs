@@ -6,6 +6,7 @@ using PlantStore.Api.DTOs;
 using PlantStore.Api.Dtos;
 using PlantStore.Api.Mappers;
 using PlantStore.Api.Models;
+using PlantStore.Api.Services;
 
 namespace PlantStore.Api.Controllers
 {
@@ -15,10 +16,12 @@ namespace PlantStore.Api.Controllers
     public class PromotionsController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IAuditService _audit;
 
-        public PromotionsController(AppDbContext context)
+        public PromotionsController(AppDbContext context, IAuditService audit)
         {
             _context = context;
+            _audit = audit;
         }
 
         [HttpGet]
@@ -58,6 +61,7 @@ namespace PlantStore.Api.Controllers
 
             _context.Promotions.Add(promotion);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Dodano", "Promocja", promotion.Id, promotion.Name);
 
             return CreatedAtAction(nameof(Get), new { id = promotion.Id }, promotion.ToDto());
         }
@@ -87,6 +91,7 @@ namespace PlantStore.Api.Controllers
             promotion.Products = products;
 
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Edytowano", "Promocja", id, promotion.Name);
             return NoContent();
         }
 
@@ -100,8 +105,10 @@ namespace PlantStore.Api.Controllers
             if (promotion == null)
                 return NotFound();
 
+            var name = promotion.Name;
             _context.Promotions.Remove(promotion);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Usunięto", "Promocja", id, name);
 
             return NoContent();
         }

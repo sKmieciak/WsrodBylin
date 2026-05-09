@@ -8,4 +8,10 @@ namespace PlantStore.Api.Dtos
         [Required]
         public OrderStatus Status { get; set; }
     }
+
+    public class UpdatePaymentStatusDto
+    {
+        [Required]
+        public PaymentStatus PaymentStatus { get; set; }
+    }
 }

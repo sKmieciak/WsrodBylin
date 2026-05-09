@@ -6,6 +6,7 @@ using PlantStore.Api.Data;
 using PlantStore.Api.Dtos;
 using PlantStore.Api.Mappers;
 using PlantStore.Api.Models;
+using PlantStore.Api.Services;
 
 namespace PlantStore.Api.Controllers
 {
@@ -15,11 +16,13 @@ namespace PlantStore.Api.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IAuditService _audit;
 
-        public ProductsController(AppDbContext context, IWebHostEnvironment env)
+        public ProductsController(AppDbContext context, IWebHostEnvironment env, IAuditService audit)
         {
             _context = context;
             _env = env;
+            _audit = audit;
         }
 
         [HttpGet]
@@ -122,6 +125,7 @@ namespace PlantStore.Api.Controllers
 
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Dodano", "Produkt", product.Id, product.Name);
 
             return CreatedAtAction(nameof(GetAll), new { id = product.Id }, ProductMapper.ToDto(product));
         }
@@ -180,6 +184,7 @@ namespace PlantStore.Api.Controllers
             product.CategoryId = dto.CategoryId;
 
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Edytowano", "Produkt", product.Id, product.Name);
 
             return NoContent();
         }
@@ -202,8 +207,10 @@ namespace PlantStore.Api.Controllers
                     System.IO.File.Delete(path);
             }
 
+            var name = product.Name;
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
+            await _audit.LogAsync("Usunięto", "Produkt", id, name);
 
             return NoContent();
         }

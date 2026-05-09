@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +8,13 @@ using PlantStore.Api.Models;
 using System.Text;
 using PlantStore.Api.Services;
 using Microsoft.Extensions.FileProviders;
+using FluentValidation;
+using PlantStore.Api.Middleware;
+using PlantStore.Api.Validators;
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace PlantStore.Api
 {
@@ -15,37 +22,41 @@ namespace PlantStore.Api
     {
         public static void Main(string[] args)
         {
+            RunApp(args);
+        }
+
+        private static void RunApp(string[] args)
+        {
             var builder = WebApplication.CreateBuilder(args);
 
             // 1) DbContext
-
-            //if (builder.Environment.IsDevelopment())
-            //{
-            //    builder.Services.AddDbContext<AppDbContext>(opt =>
-            //        opt.UseSqlite(builder.Configuration.GetConnectionString("DevelopmentConnection")));
-            //}
-            //else
-            //{
+            if (builder.Environment.IsDevelopment())
+            {
                 builder.Services.AddDbContext<AppDbContext>(opt =>
-                    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            //}
+                    opt.UseSqlite(builder.Configuration.GetConnectionString("DevelopmentConnection"))
+                       .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning)));
+            }
+            else
+            {
+                builder.Services.AddDbContext<AppDbContext>(opt =>
+                    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                       .ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning)));
+            }
 
-
-
-            //builder.Services.AddDbContext<AppDbContext>(opt =>
-            //    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-            // 2) CORS
+            // 2) CORS — origins z konfiguracji (appsettings.json / appsettings.Production.json / env vars)
             builder.Services.AddCors(options =>
                 options.AddPolicy("AllowFrontend", policy =>
-                    policy.WithOrigins("http://localhost:5173")
+                {
+                    var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()!;
+                    policy.WithOrigins(allowedOrigins)
                           .AllowAnyMethod()
-                          .AllowAnyHeader()));
+                          .AllowAnyHeader();
+                }));
 
             // 3) JwtSettings
             builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
             var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSettings>();
-            var key = Encoding.UTF8.GetBytes(jwtSettings.Key);
+            var key = Encoding.UTF8.GetBytes(jwtSettings!.Key);
 
             // 4) Hasher
             builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
@@ -55,8 +66,6 @@ namespace PlantStore.Api
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-
-                // No other changes are needed in the file.
             })
             .AddJwtBearer(options =>
             {
@@ -75,65 +84,96 @@ namespace PlantStore.Api
 
             builder.Services.AddAuthorization();
 
-            // 6) Controllers + Swagger
-            builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<IPasswordHasher, BcryptPasswordHasher>();
-            builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new() { Title = "PlantStore API", Version = "v1" });
+            // 6) FluentValidation
+            builder.Services.AddValidatorsFromAssemblyContaining<ReviewDtoValidator>();
 
-    // 🔐 JWT support
-    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
-    {
-        Name = "Authorization",
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
-        Scheme = "Bearer",
-        BearerFormat = "JWT",
-        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Description = "Wpisz: Bearer {twój_token}"
-    });
-
-    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
-    {
-        {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
-            {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+            // 7) Controllers + JSON options
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
                 {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
-    });
-});
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                });
+
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddScoped<IPasswordHasher, BcryptPasswordHasher>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddSingleton<IPushService, PushService>();
+            builder.Services.AddScoped<IAuditService, AuditService>();
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new() { Title = "PlantStore API", Version = "v1" });
+
+                c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+                    Description = "Wpisz: Bearer {twój_token}"
+                });
+
+                c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+                {
+                    {
+                        new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                        {
+                            Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                            {
+                                Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
+
             Stripe.StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
+            // 8) Rate limiting — brute-force protection dla /auth/login
+            builder.Services.AddRateLimiter(options =>
+            {
+                options.AddFixedWindowLimiter("auth", limiterOptions =>
+                {
+                    limiterOptions.PermitLimit = 10;
+                    limiterOptions.Window = TimeSpan.FromMinutes(1);
+                    limiterOptions.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+                    limiterOptions.QueueLimit = 0;
+                });
+                options.RejectionStatusCode = 429;
+            });
+
             var app = builder.Build();
+
+            // Globalny handler wyjątków — musi być pierwszy
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
+
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseCors("AllowFrontend");
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseStaticFiles(); // umożliwia dostęp do /images/ przez przeglądarkę
+
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
             app.UseRouting();
-            // Musi być w tej kolejności!
+            app.UseRateLimiter();
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();
             app.MapFallbackToFile("index.html");
 
-
-            //DB Seeding
+            // DB Seeding
             using (var scope = app.Services.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -141,15 +181,18 @@ namespace PlantStore.Api
 
                 if (app.Environment.IsDevelopment())
                 {
-                    context.Database.Migrate();
+                    context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
                     DbSeeder.Seed(context, hasher);
+                }
+                else
+                {
+                    context.Database.EnsureCreated();
                 }
             }
 
-
             app.Run();
-
-
         }
     }
 }
+
