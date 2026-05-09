@@ -34,4 +34,9 @@
 		</Content>
 	</ItemGroup>
 
+	<!-- Nie pakuj lokalnych zdjęć produktów do publish — produkcja ma własne -->
+	<ItemGroup>
+		<Content Remove="wwwroot\images\**" />
+	</ItemGroup>
+
 </Project>
