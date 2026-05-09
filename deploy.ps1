@@ -23,8 +23,10 @@ function Deploy-Frontend {
     Pop-Location
 
     Write-Host "[FRONTEND] Uploading..." -ForegroundColor Cyan
-    # Clear remote wwwroot and upload fresh build
-    Invoke-SSH "rmdir /s /q `"$($VPS_DEPLOY.Replace('/','\'))\wwwroot`" 2>nul & mkdir `"$($VPS_DEPLOY.Replace('/','\'))\wwwroot`""
+    # Usuwamy tylko pliki frontendu (index.html + assets/), NIE ruszamy images/ ze zdjęciami produktów
+    $WIN_WWWROOT = $VPS_DEPLOY.Replace('/','\') + "\wwwroot"
+    Invoke-SSH "if not exist `"$WIN_WWWROOT`" mkdir `"$WIN_WWWROOT`""
+    Invoke-SSH "del /q `"$WIN_WWWROOT\index.html`" 2>nul & rmdir /s /q `"$WIN_WWWROOT\assets`" 2>nul & exit 0"
     Invoke-Expression "scp $SSH_OPTS -r `"$FRONTEND_SRC\dist\.`" `"${VPS}:${VPS_DEPLOY}/wwwroot/`""
     Write-Host "[FRONTEND] Done!" -ForegroundColor Green
 }
