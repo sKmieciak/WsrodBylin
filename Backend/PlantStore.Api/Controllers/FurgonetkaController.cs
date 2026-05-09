@@ -88,7 +88,7 @@ namespace PlantStore.Api.Controllers
                     totalPaid = o.PaymentStatus == PaymentStatus.Paid ? totalProductsPrice + o.DeliveryCost : 0,
                     codAmount = 0,
                     totalWeight = 0.5,
-                    point = (string?)null,
+                    point = o.PaczkomatPoint,
                     comment = "",
                     shippingAddress = new
                     {

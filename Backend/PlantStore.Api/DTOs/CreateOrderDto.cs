@@ -16,6 +16,7 @@ namespace PlantStore.Api.Dtos
         public string ShippingPostalCode { get; set; } = string.Empty;
         public string ShippingCity { get; set; } = string.Empty;
         public string ShippingCountry { get; set; } = string.Empty;
+        public string? PaczkomatPoint { get; set; }
     }
 
     public class CreateOrderItemDto

@@ -16,6 +16,7 @@ namespace PlantStore.Api.Dtos
         public string PaymentMethod { get; set; } = string.Empty;
         public decimal DeliveryCost { get; set; }
         public string? TrackingNumber { get; set; }
+        public string? PaczkomatPoint { get; set; }
         public List<OrderItemDto> Items { get; set; } = new();
     }
 }

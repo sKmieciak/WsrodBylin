@@ -88,6 +88,7 @@ namespace PlantStore.Api.Controllers
                 ShippingPostalCode = dto.ShippingPostalCode,
                 ShippingCity = dto.ShippingCity,
                 ShippingCountry = dto.ShippingCountry,
+                PaczkomatPoint = dto.PaczkomatPoint,
             };
 
             _context.Orders.Add(order);
@@ -223,6 +224,7 @@ namespace PlantStore.Api.Controllers
                 PaymentMethod = order.PaymentMethod,
                 DeliveryCost = order.DeliveryCost,
                 TrackingNumber = order.TrackingNumber,
+                PaczkomatPoint = order.PaczkomatPoint,
                 Items = order.Items.Select(item => new OrderItemDto
                 {
                     ProductId = item.ProductId,

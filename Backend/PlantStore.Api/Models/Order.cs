@@ -29,5 +29,6 @@ namespace PlantStore.Api.Models
         public string? PaymentIntentId { get; set; }
         public PaymentStatus PaymentStatus { get; set; } = PaymentStatus.Pending;
         public string? TrackingNumber { get; set; }
+        public string? PaczkomatPoint { get; set; }
     }
 }
