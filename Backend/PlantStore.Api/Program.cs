@@ -188,6 +188,10 @@ namespace PlantStore.Api
                 else
                 {
                     context.Database.EnsureCreated();
+                    context.Database.ExecuteSqlRaw(@"
+                        IF COL_LENGTH('Orders', 'PaczkomatPoint') IS NULL
+                            ALTER TABLE Orders ADD PaczkomatPoint nvarchar(max) NULL
+                    ");
                 }
             }
 
