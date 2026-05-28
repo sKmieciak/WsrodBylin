@@ -48,6 +48,10 @@ namespace PlantStore.Api.Controllers
             if (!products.Any())
                 return BadRequest("Nieprawidłowe produkty.");
 
+            var totalQuantity = dto.Items.Sum(i => i.Quantity);
+            if (totalQuantity > 16)
+                return BadRequest($"Maksymalna łączna ilość produktów w zamówieniu wynosi 16 szt. (zamówiono: {totalQuantity}).");
+
             var orderItems = new List<OrderItem>();
 
             foreach (var item in dto.Items)
@@ -58,7 +62,7 @@ namespace PlantStore.Api.Controllers
                 var product = products[item.ProductId];
 
                 if (item.Quantity > 16)
-                    return BadRequest($"Maksymalna ilość produktu w zamówieniu wynosi 16 szt. ({product.Name}).");
+                    return BadRequest($"Maksymalna ilość jednego produktu wynosi 16 szt. ({product.Name}).");
 
                 if (product.InStock < item.Quantity)
                     return BadRequest($"Niewystarczający stan magazynu: {product.Name} (dostępne: {product.InStock}).");
