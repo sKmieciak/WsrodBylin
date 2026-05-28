@@ -57,6 +57,9 @@ namespace PlantStore.Api.Controllers
 
                 var product = products[item.ProductId];
 
+                if (item.Quantity > 16)
+                    return BadRequest($"Maksymalna ilość produktu w zamówieniu wynosi 16 szt. ({product.Name}).");
+
                 if (product.InStock < item.Quantity)
                     return BadRequest($"Niewystarczający stan magazynu: {product.Name} (dostępne: {product.InStock}).");
 

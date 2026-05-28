@@ -46,7 +46,7 @@ namespace PlantStore.Api.Controllers
 
             if (existing != null)
             {
-                existing.Quantity += dto.Quantity;
+                existing.Quantity = Math.Min(16, existing.Quantity + dto.Quantity);
             }
             else
             {
@@ -72,7 +72,7 @@ namespace PlantStore.Api.Controllers
 
             if (item == null) return NotFound();
 
-            item.Quantity = dto.Quantity;
+            item.Quantity = Math.Clamp(dto.Quantity, 1, 16);
             await _context.SaveChangesAsync();
 
             return Ok();
