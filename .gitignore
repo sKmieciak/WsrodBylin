@@ -1,0 +1,27 @@
+# Build artifacts
+bin/
+obj/
+publish/
+dist/
+dist.zip
+
+# .NET
+*.user
+*.Backup.tmp
+*.suo
+.vs/
+
+# SQLite database (dev only, never commit data)
+*.db
+*.db-shm
+*.db-wal
+
+# Frontend deps
+node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
