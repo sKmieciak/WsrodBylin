@@ -144,36 +144,39 @@ namespace PlantStore.Api.Controllers
             var category = await _context.Categories.FindAsync(dto.CategoryId);
             if (category == null) return BadRequest("Invalid category.");
 
-            // Usunięcie starych zdjęć z dysku i bazy
-            foreach (var image in product.Images)
+            if (dto.Images != null && dto.Images.Count > 0)
             {
-                var path = Path.Combine(_env.WebRootPath, image.Url.TrimStart('/'));
-                if (System.IO.File.Exists(path))
-                    System.IO.File.Delete(path);
-            }
-
-            _context.ProductImages.RemoveRange(product.Images);
-            product.Images.Clear();
-
-            // Dodanie nowych zdjęć
-            for (int i = 0; i < dto.Images.Count; i++)
-            {
-                var image = dto.Images[i];
-                if (image.Length > 0)
+                // Usunięcie starych zdjęć z dysku i bazy
+                foreach (var image in product.Images)
                 {
-                    var fileName = $"{Guid.NewGuid()}_{image.FileName}";
-                    var path = Path.Combine(_env.WebRootPath, "images", fileName);
+                    var path = Path.Combine(_env.WebRootPath, image.Url.TrimStart('/'));
+                    if (System.IO.File.Exists(path))
+                        System.IO.File.Delete(path);
+                }
 
-                    using (var stream = new FileStream(path, FileMode.Create))
+                _context.ProductImages.RemoveRange(product.Images);
+                product.Images.Clear();
+
+                // Dodanie nowych zdjęć
+                for (int i = 0; i < dto.Images.Count; i++)
+                {
+                    var image = dto.Images[i];
+                    if (image.Length > 0)
                     {
-                        await image.CopyToAsync(stream);
+                        var fileName = $"{Guid.NewGuid()}_{image.FileName}";
+                        var path = Path.Combine(_env.WebRootPath, "images", fileName);
+
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            await image.CopyToAsync(stream);
+                        }
+
+                        var imageUrl = $"/images/{fileName}";
+                        product.Images.Add(new ProductImage { Url = imageUrl });
+
+                        if (i == 0)
+                            product.ImageUrl = imageUrl;
                     }
-
-                    var imageUrl = $"/images/{fileName}";
-                    product.Images.Add(new ProductImage { Url = imageUrl });
-
-                    if (i == 0)
-                        product.ImageUrl = imageUrl; // zaktualizuj domyślne zdjęcie
                 }
             }
 

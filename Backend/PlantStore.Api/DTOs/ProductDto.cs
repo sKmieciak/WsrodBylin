@@ -11,6 +11,7 @@
         public string? DefaultImageUrl { get; set; } // 👈 nowość
 
         public int InStock { get; set; }
+        public int CategoryId { get; set; }
         public string? CategoryName { get; set; }
     }
 }
