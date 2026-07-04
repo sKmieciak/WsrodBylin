@@ -191,6 +191,8 @@ namespace PlantStore.Api
                     context.Database.ExecuteSqlRaw(@"
                         IF COL_LENGTH('Orders', 'PaczkomatPoint') IS NULL
                             ALTER TABLE Orders ADD PaczkomatPoint nvarchar(max) NULL
+                        IF COL_LENGTH('Products', 'IsNew') IS NULL
+                            ALTER TABLE Products ADD IsNew bit NOT NULL DEFAULT 0
                     ");
                 }
             }

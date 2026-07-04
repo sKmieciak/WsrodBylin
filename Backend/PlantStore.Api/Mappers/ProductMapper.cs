@@ -21,6 +21,7 @@ namespace PlantStore.Api.Mappers
                 DefaultImageUrl = product.ImageUrl,
 
                 InStock = product.InStock,
+                IsNew = product.IsNew,
                 CategoryId = product.CategoryId,
                 CategoryName = product.Category?.Name
             };

@@ -33,6 +33,10 @@ export const ProductList = () => {
     return matchesSearch && matchesCategory && matchesMinPrice && matchesMaxPrice;
   });
 
+  const newProducts = products.filter((p) => p.isNew);
+  const noFiltersActive =
+    search === "" && !selectedCategory && priceFilter.min === null && priceFilter.max === null;
+
   return (
     <div className="container">
       <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-8">
@@ -41,6 +45,20 @@ export const ProductList = () => {
           onPriceChange={(min, max) => setPriceFilter({ min, max })}
         />
         <div>
+          {!loading && noFiltersActive && newProducts.length > 0 && (
+            <div className="mb-8">
+              <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span>🌱</span> Nowości
+              </h2>
+              <div className="flex gap-6 overflow-x-auto pb-2">
+                {newProducts.map((product) => (
+                  <div key={product.id} className="w-56 flex-shrink-0">
+                    <ProductCard product={product} promotions={promotions} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
           {loading ? (
             <div className="grid gap-6 grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]">
               {Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)}

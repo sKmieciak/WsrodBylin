@@ -6,5 +6,6 @@ export interface Product {
   defaultImageUrl: string;
   imageUrls: string[]; // ⬅️ dodaj to
   inStock: number;
+  isNew?: boolean;
   categoryName: string | null;
 }

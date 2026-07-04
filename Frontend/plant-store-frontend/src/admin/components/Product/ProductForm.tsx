@@ -19,6 +19,7 @@ export default function ProductForm({ defaultValues, onSubmit, onCancel, disable
   const [description, setDescription] = useState(defaultValues?.description || "");
   const [price, setPrice] = useState(defaultValues?.price || 0);
   const [inStock, setInStock] = useState(defaultValues?.inStock || 0);
+  const [isNew, setIsNew] = useState(defaultValues?.isNew ?? false);
   const [categoryId, setCategoryId] = useState(defaultValues?.categoryId || 0);
   const [imageFiles, setImageFiles] = useState<File[]>([]);
   const [categories, setCategories] = useState<{ id: number; name: string }[]>([]);
@@ -39,6 +40,7 @@ export default function ProductForm({ defaultValues, onSubmit, onCancel, disable
     formData.append("description", description);
     formData.append("price", price.toString());
     formData.append("inStock", inStock.toString());
+    formData.append("isNew", isNew.toString());
     formData.append("categoryId", categoryId.toString());
 
     imageFiles.forEach((file) => {
@@ -57,6 +59,16 @@ export default function ProductForm({ defaultValues, onSubmit, onCancel, disable
         <NumberInput label="Cena" value={price} onChange={setPrice} required />
         <NumberInput label="Stan magazynowy" value={inStock} onChange={setInStock} required />
       </div>
+
+      <label className="flex items-center gap-2 cursor-pointer select-none">
+        <input
+          type="checkbox"
+          checked={isNew}
+          onChange={(e) => setIsNew(e.target.checked)}
+          className="w-4 h-4 accent-green-600"
+        />
+        <span className="font-medium">Nowość (wyświetlaj w sekcji „Nowości")</span>
+      </label>
 
       {defaultValues && (defaultValues.imageUrls?.length > 0 || defaultValues.defaultImageUrl) && imageFiles.length === 0 && (
         <div>

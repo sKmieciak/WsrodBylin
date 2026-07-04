@@ -100,6 +100,7 @@ namespace PlantStore.Api.Controllers
                 Description = dto.Description,
                 Price = dto.Price,
                 InStock = dto.InStock,
+                IsNew = dto.IsNew,
                 CategoryId = dto.CategoryId
             };
 
@@ -185,6 +186,7 @@ namespace PlantStore.Api.Controllers
             product.Description = dto.Description;
             product.Price = dto.Price;
             product.InStock = dto.InStock;
+            product.IsNew = dto.IsNew;
             product.CategoryId = dto.CategoryId;
 
             await _context.SaveChangesAsync();

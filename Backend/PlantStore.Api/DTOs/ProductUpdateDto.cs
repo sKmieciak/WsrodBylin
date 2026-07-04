@@ -20,6 +20,8 @@ namespace PlantStore.Api.Dtos
         [Range(0, int.MaxValue)]
         public int InStock { get; set; }
 
+        public bool IsNew { get; set; }
+
         [Required]
         public int CategoryId { get; set; }
     }

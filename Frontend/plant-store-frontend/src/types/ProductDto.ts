@@ -6,6 +6,7 @@ export interface ProductDto {
   imageUrls: string[];
   defaultImageUrl?: string;
   inStock: number;
+  isNew: boolean;
   categoryId: number;
   categoryName: string | null;
 }

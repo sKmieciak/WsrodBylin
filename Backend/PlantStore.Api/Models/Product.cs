@@ -10,6 +10,7 @@
         public string? ImageUrl { get; set; } // 👈 jako domyślne zdjęcie
 
         public int InStock { get; set; }
+        public bool IsNew { get; set; }
 
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
