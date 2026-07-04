@@ -27,7 +27,7 @@ export const ProductCard = ({ product, promotions = [] }: Props) => {
     e.stopPropagation();
     if (!isInStock) return;
     addToCart(
-      { id: product.id, name: product.name, image: product.defaultImageUrl ?? "", price: product.price },
+      { id: product.id, name: product.name, image: product.defaultImageUrl ?? "", price: product.price, inStock: product.inStock },
       1
     );
     setAdded(true);
@@ -74,6 +74,13 @@ export const ProductCard = ({ product, promotions = [] }: Props) => {
         )}
         <h3 className="text-sm font-medium text-foreground mt-1">{product.name}</h3>
         <p className="text-xs sm:text-sm text-muted mt-1 line-clamp-2">{product.description}</p>
+        {isInStock && (
+          <p className={`text-xs mt-1 font-medium ${product.inStock <= 3 ? "text-orange-600" : "text-gray-500"}`}>
+            {product.inStock <= 3
+              ? `Ostatnie ${product.inStock} szt.`
+              : `Dostępne: ${product.inStock} szt.`}
+          </p>
+        )}
       </div>
 
       {/* Przycisk Dodaj do koszyka */}

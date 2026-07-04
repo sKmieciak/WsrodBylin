@@ -8,5 +8,6 @@
         public string ProductImage { get; set; } = string.Empty;
         public decimal ProductPrice { get; set; }
         public int Quantity { get; set; }
+        public int InStock { get; set; }
     }
 }

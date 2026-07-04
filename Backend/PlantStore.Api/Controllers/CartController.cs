@@ -41,6 +41,11 @@ namespace PlantStore.Api.Controllers
         {
             var userId = GetUserId();
 
+            var product = await _context.Products.FindAsync(dto.ProductId);
+            if (product == null) return NotFound();
+            if (product.InStock <= 0)
+                return BadRequest($"Produkt {product.Name} jest obecnie niedostępny.");
+
             var existing = await _context.CartItems
                 .FirstOrDefaultAsync(ci => ci.UserId == userId && ci.ProductId == dto.ProductId);
 
@@ -53,11 +58,12 @@ namespace PlantStore.Api.Controllers
                 var newQty = Math.Min(16, existing.Quantity + dto.Quantity);
                 if (currentTotal - existing.Quantity + newQty > 16)
                     newQty = 16 - (currentTotal - existing.Quantity);
+                newQty = Math.Min(newQty, product.InStock);
                 existing.Quantity = Math.Max(1, newQty);
             }
             else
             {
-                var allowed = Math.Min(dto.Quantity, 16 - currentTotal);
+                var allowed = Math.Min(Math.Min(dto.Quantity, 16 - currentTotal), product.InStock);
                 if (allowed <= 0) return BadRequest("Koszyk pełny — maksymalna łączna ilość to 16 szt.");
                 _context.CartItems.Add(new CartItem
                 {
@@ -84,7 +90,13 @@ namespace PlantStore.Api.Controllers
                 .Where(ci => ci.UserId == userId && ci.ProductId != productId)
                 .SumAsync(ci => ci.Quantity);
 
-            item.Quantity = Math.Clamp(dto.Quantity, 1, 16 - otherTotal);
+            var stock = await _context.Products
+                .Where(p => p.Id == productId)
+                .Select(p => p.InStock)
+                .FirstOrDefaultAsync();
+
+            var maxQty = Math.Max(1, Math.Min(16 - otherTotal, stock));
+            item.Quantity = Math.Clamp(dto.Quantity, 1, maxQty);
             await _context.SaveChangesAsync();
 
             return Ok();

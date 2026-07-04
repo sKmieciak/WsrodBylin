@@ -19,6 +19,7 @@ addItem: (
     name: string;
     image: string;
     price: number;
+    inStock?: number;
   },
   quantity: number
 ) => Promise<void>;
@@ -63,6 +64,7 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     name: string;
     image: string;
     price: number;
+    inStock?: number;
   },
   quantity: number
 ) => {
@@ -70,14 +72,15 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
     await apiAddToCart({ productId: product.id, quantity });
     await fetchCart();
   } else {
+    const stock = product.inStock ?? Infinity;
     const existing = cart.find((item) => item.productId === product.id);
     let updated: CartItemDto[];
 
     if (existing) {
-      const newQty = Math.min(16, existing.quantity + quantity, 16 - totalQuantity + existing.quantity);
+      const newQty = Math.max(1, Math.min(16, existing.quantity + quantity, 16 - totalQuantity + existing.quantity, stock));
       updated = cart.map((item) =>
         item.productId === product.id
-          ? { ...item, quantity: newQty }
+          ? { ...item, quantity: newQty, inStock: product.inStock ?? item.inStock }
           : item
       );
     } else {
@@ -89,7 +92,8 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
           productName: product.name,
           productImage: product.image,
           productPrice: product.price,
-          quantity,
+          quantity: Math.max(1, Math.min(quantity, 16 - totalQuantity, stock)),
+          inStock: product.inStock,
         },
       ];
     }
@@ -105,7 +109,9 @@ export const CartProvider = ({ children }: { children: React.ReactNode }) => {
       await fetchCart();
     } else {
       const updated = cart.map((item) =>
-        item.productId === productId ? { ...item, quantity } : item
+        item.productId === productId
+          ? { ...item, quantity: Math.max(1, Math.min(quantity, item.inStock ?? Infinity)) }
+          : item
       );
       saveLocalCart(updated);
     }

@@ -31,6 +31,11 @@ export default function CartItem({ item, updateItem, removeItem }: CartItemProps
         <p className="text-xs text-gray-500 mt-1">
           {item.productPrice.toFixed(2)} zł x {item.quantity}
         </p>
+        {item.inStock != null && item.quantity >= item.inStock && (
+          <p className="text-xs text-orange-600 mt-0.5">
+            Dostępne tylko {item.inStock} szt.
+          </p>
+        )}
       </div>
 
       <div className="flex items-center gap-1">
@@ -43,7 +48,7 @@ export default function CartItem({ item, updateItem, removeItem }: CartItemProps
         <span className="px-2 min-w-[24px] text-center">{item.quantity}</span>
         <button
           onClick={() => updateItem(item.productId, item.quantity + 1)}
-          disabled={totalQuantity >= 16}
+          disabled={totalQuantity >= 16 || (item.inStock != null && item.quantity >= item.inStock)}
           className="px-2 py-1 border rounded text-lg font-semibold hover:bg-gray-100 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           +

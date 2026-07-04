@@ -6,4 +6,5 @@ export interface CartItemDto {
   productImage: string;
   productPrice: number;
   quantity: number;
+  inStock?: number;
 }

@@ -14,7 +14,8 @@ namespace PlantStore.Api.Mappers
                 ProductName = item.Product?.Name ?? string.Empty,
                 ProductImage = item.Product?.ImageUrl ?? string.Empty,
                 ProductPrice = item.Product?.Price ?? 0,
-                Quantity = item.Quantity
+                Quantity = item.Quantity,
+                InStock = item.Product?.InStock ?? 0
             };
         }
     }

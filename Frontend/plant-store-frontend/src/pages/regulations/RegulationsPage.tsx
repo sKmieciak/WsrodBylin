@@ -197,7 +197,6 @@ export default function RegulationsPage() {
           z następujących sposobów:
         </h2>
         <p className="mb-2">- przelew na konto bankowe Sprzedawcy,</p>
-        <p className="mb-2">- płatność za pobraniem,</p>
         <p className="mb-2">
           - za pośrednictwem usług płatniczych dostawców zewnętrznych.
         </p>
@@ -231,10 +230,6 @@ export default function RegulationsPage() {
           wyżej wymienionych sposobów w terminie 7 dni kalendarzowych od dnia
           zawarcia umorzy sprzedaży.
         </p>
-        <p className="mb-2">
-          5.6. W przypadku wyboru płatności za pobraniem, Klient zobowiązany
-          jest do dokonania płatności przy odbiorze przesyłki.
-        </p>
         <h2 className="text-lg font-semibold mt-6 mb-2">§ 6 Dostawa</h2>
         <p className="mb-2">
           6.1. Zamówione towary są dostarczane wyłącznie na terytorium
@@ -253,7 +248,6 @@ export default function RegulationsPage() {
           6.3. Dostawa zamówionych Towarów odbywa się za pośrednictwem:
         </h2>
         <p className="mb-2">- Kurier InPost</p>
-        <p className="mb-2">- Kurier DPD</p>
         <p className="mb-2">- InPost Paczkomaty</p>
         <p className="mb-2">
           6.4. W momencie przekazania towaru firmie kurierskiej Kupujący jest
@@ -271,11 +265,7 @@ export default function RegulationsPage() {
           Zamówienia.
         </p>
         <p className="mb-2">
-          6.7. Koszt dostawy towaru w przypadku wyboru płatności za pobraniem w
-          całości pokrywa Klient.
-        </p>
-        <p className="mb-2">
-          6.8. W momencie przyjęcia towaru Klient zobowiązany jest potwierdzić
+          6.7. W momencie przyjęcia towaru Klient zobowiązany jest potwierdzić
           jego odbiór. Od tej pory towar staje się własnością Klienta.
         </p>
         <h2 className="text-lg font-semibold mt-6 mb-2">

@@ -57,6 +57,7 @@ namespace PlantStore.Api.Controllers
 
             var totalItems = await query.CountAsync();
             var products = await query
+                .OrderByDescending(p => p.Id) // najnowsze produkty na górze
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();

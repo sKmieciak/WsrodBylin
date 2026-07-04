@@ -27,6 +27,7 @@ export default function ProductInfo({
   const [cartError, setCartError] = useState<string | null>(null);
   const { addToCart, totalQuantity } = useCart();
   const remaining = Math.max(0, 16 - totalQuantity);
+  const maxQty = Math.min(remaining, stock);
 
   const safeImage = image || "/images/placeholder.png";
 
@@ -39,6 +40,7 @@ export default function ProductInfo({
           name,
           image: safeImage,
           price,
+          inStock: stock,
         },
         quantity
       );
@@ -76,8 +78,12 @@ export default function ProductInfo({
         )}
 
         {/* Dostępność */}
-        <p className={`text-sm ${stock > 0 ? "text-green-600" : "text-red-500"}`}>
-          {stock > 0 ? "Dostępny" : "Niedostępny"}
+        <p className={`text-sm ${stock > 0 ? (stock <= 3 ? "text-orange-600" : "text-green-600") : "text-red-500"}`}>
+          {stock > 0
+            ? stock <= 3
+              ? `Ostatnie ${stock} szt.`
+              : `Dostępne: ${stock} szt.`
+            : "Niedostępny"}
         </p>
 
         {/* Opis */}
@@ -94,9 +100,9 @@ export default function ProductInfo({
             id="quantity"
             type="number"
             min={1}
-            max={remaining}
+            max={maxQty}
             value={quantity}
-            onChange={(e) => setQuantity(Math.min(remaining, Math.max(1, parseInt(e.target.value) || 1)))}
+            onChange={(e) => setQuantity(Math.min(maxQty, Math.max(1, parseInt(e.target.value) || 1)))}
             className="w-20 border rounded px-2 py-1"
           />
         </div>

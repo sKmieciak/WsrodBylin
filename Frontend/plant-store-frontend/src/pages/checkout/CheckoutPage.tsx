@@ -9,6 +9,7 @@ import CheckoutAddressForm, { type AddressData } from "../../components/Checkout
 import CheckoutDeliveryMethod from "../../components/Checkout/CheckoutDeliveryMethod";
 import CheckoutPaymentMethod from "../../components/Checkout/CheckoutPaymentMethod";
 import { createOrder } from "../../api/orderApi";
+import { getApiErrorMessage } from "../../utils/errorHandling";
 
 const deliveryOptions = [
   { label: "Paczkomaty InPost", price: 21, note: "Cena dla paczek do 16 szt." },
@@ -122,8 +123,8 @@ export default function CheckoutPage() {
           total: cartTotal + selectedDelivery.price,
         },
       });
-    } catch {
-      setError("Błąd przy składaniu zamówienia. Spróbuj ponownie.");
+    } catch (err) {
+      setError(getApiErrorMessage(err));
     } finally {
       setLoading(false);
     }
